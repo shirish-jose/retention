@@ -38,6 +38,45 @@ describe User do
     end
   end
 
+  describe '#recommendations' do
+    let(:user) { factory(:user) }
+    let(:item) { factory(:item) }
+
+    subject { user }
+
+    context 'has recommendations' do
+      let(:other_user)                 { factory(:user) }
+      let(:other_item)                 { factory(:item) }
+      let!(:other_user_recommendation) { factory(:recommendation, user: other_user, item: other_item) }
+      let!(:recommendation)            { factory(:recommendation, user: user, item: item) }
+
+      its(:recommendations) { should == [recommendation] }
+    end
+
+    context 'has no recommendations' do
+      its(:recommendations) { should == [] }
+    end
+  end
+
+  describe '#recommended_items' do
+    let(:user)   { factory(:user) }
+    let(:item_A) { factory(:item) }
+    let(:item_B) { factory(:item) }
+
+    subject { user }
+
+    context 'has recommendations' do
+      let!(:recommendation_A) { factory(:recommendation, user: user, item: item_A, weight: 1) }
+      let!(:recommendation_B) { factory(:recommendation, user: user, item: item_B, weight: 2) }
+
+      its(:recommended_items) { should == [item_B, item_A] }
+    end
+
+    context 'has no recommendations' do
+      its(:recommendations) { should == [] }
+    end
+  end
+
   describe '::validations' do
 
     describe 'presence' do
