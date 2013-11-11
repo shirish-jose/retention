@@ -36,3 +36,11 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 end
+
+def factory(*args)
+  FactoryGirl.create(*args)
+end
+
+def factory_build(*args)
+  FactoryGirl.build(*args)
+end
