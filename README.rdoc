@@ -1,21 +1,24 @@
 ############################
 # Data/Relationship model: #
 ############################
-Admin:    name, standard devise fields
-User:     name
-Item:     name
-Category: name
+
+  Admin:    name, standard devise fields
+  User:     name
+  Item:     name
+  Category: name
 
 ################
 # Associations #
 ################
-User can purchase many Items
-Items can be purchased by many users
-Items have many categories
+
+  User can purchase many Items
+  Items can be purchased by many users
+  Items have many categories
 
 ###############
 # App Details #
 ###############
+
 1. Create a Rails app and push to Github project so we can share!
 2. Using Devise gem (or another authentication gem you're more familiar with), create simple ability for admin to log in
 3. Once logged in, admin can see a table that contains all users and their items purchased. Item categories are listed by each item.
