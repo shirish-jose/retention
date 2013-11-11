@@ -2,6 +2,42 @@ require 'spec_helper'
 
 describe User do
 
+  describe '#items' do
+    let!(:user) { factory(:user) }
+
+    subject { user.items }
+
+    context 'no purchases yet' do
+
+      it { should == [] }
+    end
+
+    context 'has made purchases' do
+      let(:item)      { factory(:item) }
+      let!(:purchase) { factory(:purchase, item: item, user: user) }
+
+      it { should == [item] }
+    end
+  end
+
+  describe '#purchases' do
+    let!(:user) { factory(:user) }
+
+    subject { user.purchases }
+
+    context 'no purchases yet' do
+
+      it { should == [] }
+    end
+
+    context 'items purchased' do
+      let(:item)      { factory(:item) }
+      let!(:purchase) { factory(:purchase, item: item, user: user) }
+
+      it { should == [purchase] }
+    end
+  end
+
   describe '::validations' do
 
     describe 'presence' do
