@@ -3,6 +3,7 @@
 FactoryGirl.define do
 
   factory :admin do
+    name     'Tester Test'
     email    'test@test.com'
     password 'testington'
   end
