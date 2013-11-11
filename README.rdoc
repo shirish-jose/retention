@@ -13,8 +13,6 @@ User can purchase many Items
 Items can be purchased by many users
 Items have many categories
 
-Admin can log in (see below)
-
 ###############
 # App Details #
 ###############
@@ -23,7 +21,6 @@ Admin can log in (see below)
 3. Once logged in, admin can see a table that contains all users and their items purchased. Item categories are listed by each item.
     TABLE COLUMNS:
     User's name, Item purchased name, Item's category names
-
 4. Clicking on a user's name will bring up a page showing:
     User name, items purchased (with associated categories),  recommended items (in order of relevance)
 
@@ -43,6 +40,7 @@ If user purchased item1, then they should be recommended [item 2, item 3]
 #######################
 # Steps for Execution #
 #######################
+
 a. Please open the terminal to the run the commands.
 b. Run 'git clone https://github.com/shirish-jose/retention.git' to clone project
 c. Change directory to retention folder(e.g. cd ../retention/)
