@@ -1,0 +1,12 @@
+%h1 Purchases
+
+%table
+
+  %thead
+    %td User Name
+    %td Item Name
+    %td Category Names
+
+  = render partial: 'purchase', collection: @purchases
+
+= will_paginate @purchases, previous_label: h('<'), next_label: h('>')

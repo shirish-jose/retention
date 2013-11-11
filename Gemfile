@@ -8,6 +8,7 @@ gem 'pg'
 gem 'rails', '3.2.13'
 gem 'rake'
 gem 'squeel'
+gem 'will_paginate'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
