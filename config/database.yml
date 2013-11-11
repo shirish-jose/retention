@@ -1,0 +1,15 @@
+development:
+  adapter:    postgresql
+  encoding:   utf8
+  reconnect:  false
+  database:   retention_development
+  username:   shirish
+  password:   manutd
+
+test:
+  adapter:      postgresql
+  encoding:     utf8
+  database:     retention_test<%= ENV['TEST_ENV_NUMBER'] %>
+  username:     shirish
+  password:     manutd
+  min_messages: warning
