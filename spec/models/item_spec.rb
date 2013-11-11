@@ -1,16 +1,16 @@
 require 'spec_helper'
 
-describe Category do
+describe Item do
 
   describe '::validations' do
 
     describe 'presence' do
-      let(:category) { factory_build(:category, name: name) }
+      let(:item) { factory_build(:item, name: name) }
 
-      subject    { category.valid? }
+      subject    { item.valid? }
 
       context 'name is present' do
-        let(:name) { 'Test Category' }
+        let(:name) { 'Test' }
 
         it { should be_true }
       end
