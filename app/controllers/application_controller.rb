@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :authenticate_admin!
 
+
   # @raise [ActionController::RoutingError]
   def not_found
     raise ActionController::RoutingError.new('Not Found')
