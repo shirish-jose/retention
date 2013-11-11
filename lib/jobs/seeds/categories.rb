@@ -1,15 +1,15 @@
 module Jobs
   module Seeds
-    class Users < Base
+    class Categories < Base
 
       def initialize
-        @file_path = 'db/seeds/mini_proj-users.csv'
+        @file_path = 'db/seeds/mini_proj-categories.csv'
       end
 
       # @param [Array<String>] fields
       # @override
       def create_record(fields)
-        User.create!(id: fields[0], name: fields[1])
+        Category.create!(id: fields[0], name: fields[1])
       end
     end
   end

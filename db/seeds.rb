@@ -8,3 +8,6 @@
 
 # Create Users
 Jobs::Seeds::Users.new.perform
+
+# Create Categories
+Jobs::Seeds::Categories.new.perform
