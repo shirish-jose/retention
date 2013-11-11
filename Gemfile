@@ -7,6 +7,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '3.2.13'
 gem 'rake'
+gem 'squeel'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

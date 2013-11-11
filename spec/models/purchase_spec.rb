@@ -2,6 +2,17 @@ require 'spec_helper'
 
 describe Purchase do
 
+  describe '#update_user_recommendations' do
+    let!(:user)          { factory(:user) }
+    let!(:category_1)    { factory(:category) }
+    let!(:item_1)        { factory(:item, categories: [category_1])}
+    let!(:item_2)        { factory(:item, categories: [category_1])}
+    let!(:make_purchase) { factory(:purchase, item: item_1, user: user) }
+
+    subject { user }
+
+    its(:recommended_items) { should == [item_2] }
+  end
 
   describe '::validations' do
     let(:item)     { factory(:item) }
