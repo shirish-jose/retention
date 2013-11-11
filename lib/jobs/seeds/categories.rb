@@ -9,7 +9,11 @@ module Jobs
       # @param [Array<String>] fields
       # @override
       def create_record(fields)
-        Category.create!(id: fields[0], name: fields[1])
+        category      = Category.new
+        category.id   = fields[0]
+        category.name = fields[1]
+        category.save
+        category
       end
     end
   end

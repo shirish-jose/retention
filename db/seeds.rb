@@ -14,3 +14,6 @@ Jobs::Seeds::Categories.new.perform
 
 # Create Items
 Jobs::Seeds::Items.new.perform
+
+# Add Categories to Items
+Jobs::Seeds::AddItemCategories.new.perform
