@@ -17,3 +17,6 @@ Jobs::Seeds::Items.new.perform
 
 # Add Categories to Items
 Jobs::Seeds::AddItemCategories.new.perform
+
+# Add User Purchases
+Jobs::Seeds::Purchases.new.perform
