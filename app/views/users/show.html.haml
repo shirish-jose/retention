@@ -1,0 +1,17 @@
+= content_for(:h2_title) { "#{@user.name} - Purchases & Recommendations" }
+
+= link_to 'Back', purchases_path
+
+%h3 Purchased Items
+%table.table.table-hover
+  - @user.items.each do |item|
+    %tr
+      %td= item.name
+      %td= categories_label(item.categories)
+
+%h3 Recommended Items
+%table.table.table-hover
+  - @user.recommended_items.each do |item|
+    %tr
+      %td= item.name
+      %td= categories_label(item.categories)

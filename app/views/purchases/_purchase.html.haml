@@ -1,4 +1,4 @@
 %tr
-  %td= purchase.user.name
+  %td= link_to purchase.user.name, user_path(purchase.user)
   %td= purchase.item.name
   %td= categories_label(purchase.item.categories)

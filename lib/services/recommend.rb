@@ -21,7 +21,9 @@ module Services
     # @return [Array<Item>]
     def recommended_items
       @recommended_items ||= begin
-        Item.where(:id.not_in => purchased_item_ids).
+        Item.select(:id).
+             group(:id).
+             where(:id.not_in => purchased_item_ids).
              joins(:categories).
              where(categories: { id: category_ids }).
              preload(:categories).

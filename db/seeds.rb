@@ -7,16 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Create Users
-Jobs::Seeds::Users.new.perform
+#Jobs::Seeds::Users.new.perform
+#
+## Create Categories
+#Jobs::Seeds::Categories.new.perform
+#
+## Create Items
+#Jobs::Seeds::Items.new.perform
+#
+## Add Categories to Items
+#Jobs::Seeds::AddItemCategories.new.perform
+#
+## Add User Purchases
+#Jobs::Seeds::Purchases.new.perform
 
-# Create Categories
-Jobs::Seeds::Categories.new.perform
-
-# Create Items
-Jobs::Seeds::Items.new.perform
-
-# Add Categories to Items
-Jobs::Seeds::AddItemCategories.new.perform
-
-# Add User Purchases
-Jobs::Seeds::Purchases.new.perform
+# Add Recommendations
+Jobs::Seeds::Recommendations.new.perform

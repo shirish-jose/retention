@@ -8,6 +8,7 @@ gem 'pg'
 gem 'rails', '3.2.13'
 gem 'rake'
 gem 'squeel'
+gem 'sneaky-save', git: 'git://github.com/partyearth/sneaky-save.git'
 gem 'will_paginate'
 
 group :assets do

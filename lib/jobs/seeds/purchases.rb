@@ -12,8 +12,9 @@ module Jobs
         purchase         = Purchase.new
         purchase.user_id = fields[0]
         purchase.item_id = fields[1]
-        purchase.save
-        p "Purchase of #{fields[1]} by #{fields[0]} created."
+
+        # @note(SP): Done to avoid running update_recommendation callback after each purchase.
+        purchase.sneaky_save
         purchase
       end
     end
