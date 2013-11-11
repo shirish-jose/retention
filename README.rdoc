@@ -28,31 +28,32 @@
     User name, items purchased (with associated categories),  recommended items (in order of relevance)
 
 Recommended items are defined as:
-Based on the purchased items, recommend items that most closely related based on the category similarity.
-Must have at least 1 category in common. Must not have already been purchased by the user.
+  Based on the purchased items, recommend items that most closely related based on the category similarity.
+  Must have at least 1 category in common. Must not have already been purchased by the user.
 
 Example:
-Item 1 is "Nike Dunks" with categories "Shoes", "Basketball", and "Nike"
-Item  2 is "Nike Street Basketball" with categories "Balls", "Basketball" and "Nike"
-Item 3 is "Addidas Jersey" with categories "Clothing", "Basketball", and "Addidas"
-Item 4 is "Golf bag" with categories "Golf", "Accessories"
 
-If user purchased item1, then they should be recommended [item 2, item 3]
-(Note: item 2 is higher precedence because it has 2 matching categories)
+  Item 1 is "Nike Dunks" with categories "Shoes", "Basketball", and "Nike"
+  Item  2 is "Nike Street Basketball" with categories "Balls", "Basketball" and "Nike"
+  Item 3 is "Addidas Jersey" with categories "Clothing", "Basketball", and "Addidas"
+  Item 4 is "Golf bag" with categories "Golf", "Accessories"
+
+  If user purchased item1, then they should be recommended [item 2, item 3]
+  (Note: item 2 is higher precedence because it has 2 matching categories)
 
 #######################
 # Steps for Execution #
 #######################
 
-a. Please open the terminal to the run the commands.
-b. Run 'git clone https://github.com/shirish-jose/retention.git' to clone project
-c. Change directory to retention folder(e.g. cd ../retention/)
-d. Run 'bundle' to install gems
-e. Run 'createdb retention_development' to create development database
-f. Run 'bundle rake db:migrate' to execute migrations
-g. Run 'bundle rake db:seed' to create seed data
-h. Run 'rails s' to start the development server
-i. The server can be accessed at 'http://localhost:3000'
-j. Run 'createdb retention_test' to create test database
-k. Run 'bundle exec rake db:test:prepare' to run migrations for test database
-l. Run 'rspec' to execute specs
+  a. Please open the terminal to the run the commands.
+  b. Run 'git clone https://github.com/shirish-jose/retention.git' to clone project
+  c. Change directory to retention folder(e.g. cd ../retention/)
+  d. Run 'bundle' to install gems
+  e. Run 'createdb retention_development' to create development database
+  f. Run 'bundle rake db:migrate' to execute migrations
+  g. Run 'bundle rake db:seed' to create seed data
+  h. Run 'rails s' to start the development server
+  i. The server can be accessed at 'http://localhost:3000'
+  j. Run 'createdb retention_test' to create test database
+  k. Run 'bundle exec rake db:test:prepare' to run migrations for test database
+  l. Run 'rspec' to execute specs
